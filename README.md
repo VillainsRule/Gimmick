@@ -7,9 +7,10 @@
 
 1. Install Node.JS & Git.
 2. Clone the repository from Git.
-3. Install dependencies: `npm i`.
-4. Run the program: `npm run start`.
-5. Try it! `http://localhost:6060`
+3. Change the directory through `cd Gimmick`.
+4. Install dependencies: `npm i`.
+5. Run the program: `npm run start`.
+6. Try it! `http://localhost:6060`
 
 <h2 align="center">function</h2>
 
