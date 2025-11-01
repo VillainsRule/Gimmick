@@ -4,7 +4,7 @@ export default async (req, res, path) => {
             method: req.method,
             headers: {
                 accept: '*/*',
-                'accept-encoding': 'gzip, deflate, br, zstd',
+                'accept-encoding': 'deflate',
                 'accept-language': 'en-US,en;q=0.9',
                 'cache-control': 'no-cache',
                 'connection': 'keep-alive',
