@@ -1,6 +1,6 @@
 <div align="center">
     <h1>gimmick</h1>
-    <h3>a gimkit interface that has cheats built-in.</h3>
+    <h3>gimkit hacks for a chromebook without extension or devtools access!</h3>
     <h3>live demo: <a href='https://gim.villainsrule.xyz'>gim.villainsrule.xyz</a></h3>
     <br>
     <h2>usage</h2>
