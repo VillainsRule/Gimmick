@@ -39,9 +39,7 @@
 <br>
 <h2 align="center">logging in to gimkit</h2>
 
-you can go to the `/$login` page to login to gimkit.
-
-for example, if you're using `https://my-awesome-codespace.app.github.dev`, go to `https://my-awesome-codespace.app.github.dev/$login`.
+you can go to the `/login` page to login to gimkit.
 
 you can see everything that is done with your email/password in [this file](./src/routes/login.html) & [this file](./src/routes/login.js) - they are only sent to gimkit.
 
@@ -58,4 +56,4 @@ this "client" embeds [thelazysquid/gimkitcheat](https://github.com/TheLazySquid/
 
 <br>
 <h5 align="center">made with ❤️ by <b>VillainsRule</b></h5>
-<h5 align="center">program working smoothly as of 9/23/25 :D</h5>
+<h5 align="center">program working smoothly as of 4/3/26 :D</h5>

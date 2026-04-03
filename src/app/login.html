@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@300;400&display=swap"
+            rel="stylesheet" />
+
+        <meta name="theme-color" content="#000000" />
+        <title>Gimmick Login</title>
+        <meta name="canonical" href="https://gim.villainsrule.xyz/login" />
+        <meta name="description"
+            content="Gimmick is a Gimkit proxy injected with cheats. You can login to your account here to get cosmetics in games." />
+        <meta property="og:site_name" content="Gimmick" />
+        <meta property="og:title" content="Gimmick Login" />
+        <meta property="og:description"
+            content="Gimmick is a Gimkit proxy injected with cheats. You can login to your account here to get cosmetics in games." />
+        <meta property="og:url" content="https://gim.villainsrule.xyz/login" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Gimmick",
+                "url": "https://gim.villainsrule.xyz/login",
+                "description": "Gimmick Login - sign in to your Gimkit account to get cosmetics in games",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://gim.villainsrule.xyz/$icons/64.png",
+                    "width": 64,
+                    "height": 64
+                }
+            }
+        </script>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/$icons/16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/$icons/32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/$icons/96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/$icons/192.png" />
+        <link rel="icon" type="image/png" sizes="256x256" href="/$icons/256.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/$icons/512.png" />
+        <link rel="apple-touch-icon" href="/$icons/180.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/$icons/152.png" />
+
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --background: #ffffff;
+                --foreground: #09090b;
+                --muted: #f4f4f5;
+                --muted-foreground: #71717a;
+                --border: #e4e4e7;
+                --input: #e4e4e7;
+                --primary: #18181b;
+                --primary-foreground: #fafafa;
+                --secondary: #f4f4f5;
+                --secondary-foreground: #18181b;
+                --ring: #09090b;
+                --radius: 0.5rem;
+                --blue: lab(48.92% 32.67 -80.36);
+                --red: lab(54.24% 58.14 28.74);
+            }
+
+            html,
+            body {
+                height: 100%;
+                background: var(--background);
+                color: var(--foreground);
+                font-family: 'Geist', sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+                margin: 0 auto;
+                padding-top: 5rem;
+                width: 100%;
+                max-width: 400px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                opacity: 0;
+                animation: fadeUp 0.5s ease forwards 0.05s;
+            }
+
+            h1 {
+                font-size: clamp(1.6rem, 4vw, 2.2rem);
+                font-weight: 600;
+                letter-spacing: -0.04em;
+                line-height: 1.1;
+                margin-bottom: 0.5rem;
+                color: var(--foreground);
+            }
+
+            .subtitle {
+                font-size: 0.875rem;
+                color: var(--muted-foreground);
+                margin-bottom: 2rem;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                width: 100%;
+            }
+
+            .input-wrapper {
+                position: relative;
+                width: 100%;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.6rem 0.85rem;
+                border-radius: var(--radius);
+                border: 1px solid var(--border);
+                background: var(--background);
+                color: var(--foreground);
+                font-family: inherit;
+                font-size: 0.875rem;
+                outline: none;
+                transition: border-color 0.15s, box-shadow 0.15s;
+            }
+
+            input::placeholder {
+                color: var(--muted-foreground);
+            }
+
+            input:focus {
+                border-color: var(--foreground);
+                box-shadow: 0 0 0 3px rgba(9, 9, 11, 0.06);
+            }
+
+            button {
+                width: 100%;
+                padding: 0.6rem 1.1rem;
+                border-radius: var(--radius);
+                background: var(--primary);
+                color: var(--primary-foreground);
+                font-family: inherit;
+                font-size: 0.875rem;
+                font-weight: 500;
+                border: none;
+                cursor: pointer;
+                transition: opacity 0.15s, transform 0.1s;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+                margin-top: 0.25rem;
+            }
+
+            button:hover {
+                opacity: 0.88;
+                transform: translateY(-1px);
+            }
+
+            button:active {
+                transform: translateY(0);
+            }
+
+            button:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            .hint {
+                font-size: 0.75rem;
+                color: var(--muted-foreground);
+                margin-top: 1.25rem;
+                line-height: 1.6;
+            }
+
+            #auth {
+                margin-top: 0.1rem;
+            }
+
+            #logout {
+                color: var(--red);
+                cursor: pointer;
+            }
+
+            .hint a {
+                color: var(--blue);
+                text-decoration: none;
+            }
+
+            .hint a:hover {
+                text-decoration: underline;
+            }
+
+            .toast {
+                position: fixed;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%) translateY(8px);
+                padding: 0.55rem 1rem;
+                border-radius: var(--radius);
+                font-size: 0.8rem;
+                font-weight: 500;
+                opacity: 0;
+                transition: opacity 0.2s, transform 0.2s;
+                pointer-events: none;
+                white-space: nowrap;
+            }
+
+            .toast.show {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            .toast.success {
+                background: var(--primary);
+                color: var(--primary-foreground);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            }
+
+            .toast.error {
+                background: #fef2f2;
+                color: #dc2626;
+                border: 1px solid #fecaca;
+                box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08);
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <h1>Gimmick Login</h1>
+            <p class="subtitle">Sign in to your Gimkit credentials. You'll be able to access your cosmetics, but won't
+                be able to start games or edit sets.</p>
+
+            <div class="form">
+                <input placeholder="username or email" id="username" type="text" autocomplete="username" />
+                <input placeholder="password" id="password" type="password" autocomplete="current-password" />
+                <button>Continue</button>
+            </div>
+
+            <p class="hint">
+                Google Accounts don't work - create a password at
+                <a href="https://gimkit.com/settings" target="_blank">gimkit.com/settings</a>
+            </p>
+
+            <p id="auth" class="hint">You aren't currently signed in.</p>
+        </main>
+
+        <div class="toast" id="toast"></div>
+
+        <script>
+            const btn = document.querySelector('button');
+            const toast = document.querySelector('#toast');
+            let toastTimer;
+
+            const showToast = (msg, type = 'success') => {
+                clearTimeout(toastTimer);
+                toast.textContent = msg;
+                toast.className = `toast ${type}`;
+                requestAnimationFrame(() => toast.classList.add('show'));
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+            }
+
+            btn.addEventListener('click', async () => {
+                const email = document.querySelector('#username').value.trim();
+                const password = document.querySelector('#password').value;
+
+                if (!email || !password) return showToast('Please fill in both fields.', 'error');
+
+                btn.disabled = true;
+                btn.textContent = 'Signing in...';
+
+                try {
+                    const res = await fetch('/login/post', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+                    const data = await res.json();
+                    if (data.error) showToast('Error: ' + data.error, 'error');
+                    else if (data.success) {
+                        showToast('Signed in!', 'success');
+                        setTimeout(() => window.location.href = '/', 1000);
+                    } else showToast('Unexpected response from server.', 'error');
+                } catch (e) {
+                    showToast('Something went wrong.', 'error');
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = 'Continue';
+                }
+            });
+
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Enter') btn.click();
+            });
+
+            fetch('/login/whoami').then(res => res.json()).then(data => {
+                if (data.email) {
+                    document.querySelector('#auth').innerHTML = `Signed in as ${data.email} - <span id="logout">logout</span>`;
+                    document.querySelector('#logout').addEventListener('click', () => {
+                        fetch('/login/logout', { method: 'POST' }).then(() => {
+                            showToast('Logged out.', 'success');
+                            setTimeout(() => window.location.reload(), 1000);
+                        }).catch(() => showToast('Something went wrong.', 'error'));
+                    });
+                }
+            });
+        </script>
+    </body>
+
+</html>

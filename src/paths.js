@@ -26,7 +26,7 @@ export default [
         handler: static_
     },
     {
-        match: /\/\$login(.*?)/,
+        match: /\/login(.*?)/,
         name: 'login',
         handler: login
     },

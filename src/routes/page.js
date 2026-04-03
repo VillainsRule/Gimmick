@@ -16,7 +16,8 @@ export default async (_req, res, path) => {
         html = html.replace(
             `<head>`,
             `<head>
-            <script>${fs.readFileSync(npath.join(import.meta.dirname, '..', 'bundle.txt'), 'utf-8')}</script>`
+            <script>${fs.readFileSync(npath.join(import.meta.dirname, '..', 'bundle.txt'), 'utf-8')}</script>
+            <meta name="robots" content="noindex, nofollow">`
         );
 
         html = html.replace(

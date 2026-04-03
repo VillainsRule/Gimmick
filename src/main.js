@@ -9,6 +9,7 @@ fs.writeFileSync(import.meta.dirname + '/bundle.txt', await script.text());
 const app = express();
 
 app.use(express.json());
+app.use(express.static(import.meta.dirname + '/app', { etag: false, lastModified: false }));
 app.disable('etag');
 
 app.all(`/*`, async (req, res) => {

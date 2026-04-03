@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /login
+
+User-agent: *
+Disallow: /join
+
+User-agent: *
+Disallow: /assets
+
+Sitemap: https://gim.villainsrule.xyz/sitemap.xml

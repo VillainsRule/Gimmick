@@ -37,7 +37,23 @@ export default async (req, res, path) => {
             return res.send({ success: true });
         }
 
-        const loginPage = fs.readFileSync(npath.join(import.meta.dirname, 'login.html'), 'utf8');
+        if (path.endsWith('/whoami')) {
+            const authReq = await fetch('https://www.gimkit.com/pages/general', {
+                headers: { cookie: req.headers.cookie || '' }
+            });
+
+            const authRes = await authReq.json();
+
+            if (!authRes.userData) return res.send({ email: null });
+            return res.send({ email: authRes.userData.email });
+        }
+
+        if (path.endsWith('/logout')) {
+            res.setHeader('set-cookie', 'connect.sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly');
+            return res.send({ success: true });
+        }
+
+        const loginPage = fs.readFileSync(npath.join(import.meta.dirname, '..', 'app', 'login.html'), 'utf8');
         res.send(loginPage);
     } catch (e) {
         console.error(e, path);
