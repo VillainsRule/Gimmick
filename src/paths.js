@@ -1,6 +1,7 @@
 import audio from './routes/audio.js';
 import content from './routes/content.js';
 import login from './routes/login.js';
+import hacks from './routes/hacks.js';
 import page from './routes/page.js';
 import static_ from './routes/static.js';
 
@@ -29,6 +30,11 @@ export default [
         match: /\/login(.*?)/,
         name: 'login',
         handler: login
+    },
+    {
+        match: /\/hacks(.*?)/,
+        name: 'hacks',
+        handler: hacks
     },
     {
         match: /(\/|)/,

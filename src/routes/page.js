@@ -17,7 +17,46 @@ export default async (_req, res, path) => {
             `<head>`,
             `<head>
             <script>${fs.readFileSync(npath.join(import.meta.dirname, '..', 'bundle.txt'), 'utf-8')}</script>
-            <meta name="robots" content="noindex, nofollow">`
+            <meta name="robots" content="noindex, nofollow">
+            <script>
+                (function enableExtraHacks() {
+                    const preferredSkin = 'galaxy';
+                    let attempts = 0;
+                    const interval = setInterval(() => {
+                        const buttons = Array.from(document.querySelectorAll('button'));
+                        const autoAnswerButton = buttons.find(el => el.textContent?.trim() === 'Start auto answering');
+                        const autoPurchaseButton = buttons.find(el => el.textContent?.trim() === 'Auto Purchase Upgrades');
+
+                        if (autoAnswerButton && !autoAnswerButton.disabled) {
+                            autoAnswerButton.click();
+                        }
+
+                        if (autoPurchaseButton && !autoPurchaseButton.disabled) {
+                            autoPurchaseButton.click();
+                        }
+
+                        const select = Array.from(document.querySelectorAll('select')).find(sel =>
+                            Array.from(sel.options).some(option => option.value === preferredSkin)
+                        );
+
+                        if (select) {
+                            const option = Array.from(select.options).find(option => option.value === preferredSkin) ?? select.options[0];
+                            if (option && select.value !== option.value) {
+                                select.value = option.value;
+                                select.dispatchEvent(new Event('change', { bubbles: true }));
+                            }
+
+                            const applyButton = buttons.find(el => el.textContent?.trim() === 'Apply');
+                            if (applyButton && !applyButton.disabled) {
+                                applyButton.click();
+                            }
+                        }
+
+                        attempts += 1;
+                        if (attempts >= 80) clearInterval(interval);
+                    }, 600);
+                })();
+            </script>`
         );
 
         html = html.replace(
