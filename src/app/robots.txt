@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 User-agent: *
-Allow: /login
+Disallow: /login
 
 User-agent: *
 Disallow: /join
