@@ -3,15 +3,8 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://gim.villainsrule.xyz</loc>
-        <lastmod>2026-04-03T15:29:19.781Z</lastmod>
+        <lastmod>2026-05-16T21:23:05.853Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
-    </url>
-
-    <url>
-        <loc>https://gim.villainsrule.xyz/login</loc>
-        <lastmod>2026-04-03T15:29:19.781Z</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
     </url>
 </urlset>
