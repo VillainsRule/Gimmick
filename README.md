@@ -6,10 +6,10 @@
     <h2>usage</h2>
 </div>
 
-1. Install [Bun](https://bun.sh) & Git.
+1. Install [Bun](https://bun.sh) (node also supported).
 2. Clone the repository from Git.
 3. Install dependencies: `bun i`.
-4. Run the program: `bun start`.
+4. Run the program: `bun .`.
 5. Try it! `http://localhost:6060`
 
 <br>
