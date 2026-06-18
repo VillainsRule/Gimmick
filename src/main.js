@@ -23,4 +23,4 @@ app.all(`/*`, async (req, res) => {
     file.handler(req, res, path);
 });
 
-app.listen(6060, () => console.log(`gimmick @ http://localhost:6060`));
+app.listen(4460, () => console.log(`gimmick @ http://localhost:4460`));

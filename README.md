@@ -10,7 +10,7 @@
 2. Clone the repository from Git.
 3. Install dependencies: `bun i`.
 4. Run the program: `bun .`.
-5. Try it! `http://localhost:6060`
+5. Try it! `http://localhost:4460`
 
 <br>
 <h2 align="center">setup "for dummies" on school computers</h2>
