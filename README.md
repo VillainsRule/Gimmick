@@ -26,10 +26,10 @@
    4. `bun start`
 6. go to the ports tab (at the top of the terminal area)
 7. if you want to also let your friends use gimmick:
-   1. right click the text that says "6060"
+   1. right click the text that says "4460"
    2. hover over "port visibility"
    3. set it to public
-8. now, right click the text that says "6060" and click "open in browser"
+8. now, right click the text that says "4460" and click "open in browser"
 9. click "continue"
 10. enjoy Gimmick!
 
