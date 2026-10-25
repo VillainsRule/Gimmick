@@ -1,7 +1,6 @@
 <div align="center">
     <h1>gimmick</h1>
-    <h3>gimkit hacks for a chromebook without extension or devtools access!</h3>
-    <h3>live demo: <a href='https://gim.villainsrule.xyz'>gim.villainsrule.xyz</a></h3>
+    <h3>gimkit hacks for a chromebook without extensions or devtools!</h3>
     <br>
     <h2>usage</h2>
 </div>
@@ -55,5 +54,4 @@ you can see everything that is done with your email/password in [this file](./sr
 this "client" embeds [thelazysquid/gimkitcheat](https://github.com/TheLazySquid/GimkitCheat) in the site, allowing you to use it anywhere, even on a Chromebook! this allows for cheating during class...without the struggle of blocked scripts at all! the code fetches and "updates" the cheat anytime the program is started, so you can quite simply just run the program and never worry about updating or maintaining anything.
 
 <br>
-<h5 align="center">made with ❤️ by <b>VillainsRule</b></h5>
-<h5 align="center">program working smoothly as of 4/3/26 :D</h5>
+<h5 align="center">made with ❤️</h5>
